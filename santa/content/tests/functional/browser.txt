@@ -4,3 +4,13 @@ Log in as the portal owner::
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
 Continue your test::
+
+    >>> browser.open(portal_url)
+
+    >>> browser.getLink('Partner').click()
+    >>> browser.getControl(name="form.widgets.IDublinCore.title").value = 'Partner01'
+    >>> browser.getControl(name="form.widgets.IDublinCore.description").value = 'Description of Partner01.'
+    >>> browser.getControl(name="form.widgets.address").value = 'Streat 12345'
+    >>> browser.getControl(name="form.widgets.post_code").value = '678910'
+    >>> browser.getControl(name="form.widgets.email").value = 'partner01@partner.com'
+    >>> browser.getControl(name="form.buttons.save").click()

@@ -3,8 +3,8 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
-i
-mport unittest2 as unittest
+
+import unittest2 as unittest
 
 
 class SantaContentLayer(PloneSandboxLayer):
