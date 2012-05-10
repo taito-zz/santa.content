@@ -26,7 +26,7 @@ years = range(current_year, 1999, -1)
 class IPartner(form.Schema):
     """Generic container content type for versatile content."""
 
-    logo = NamedImage(
+    image = NamedImage(
         title=_(u'Logo'),
         description=_(u'Upload your organization logo.'),
         required=False,
