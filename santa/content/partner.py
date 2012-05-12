@@ -53,6 +53,7 @@ class IPartner(form.Schema):
         title=_(u'E-mail'),
         description=_(u"Input e-mail line by line putting representative e-mail on the top."),
         value_type=TextLine(),
+        required=True,
     )
 
     year = Choice(
