@@ -9,7 +9,7 @@
   <!-- Basic properties -->
   <property name="title" i18n:translate="">Partner</property>
   <property name="description" i18n:translate=""></property>
-  <property name="content_icon">++resource++santa.content/parter.png</property>
+  <property name="content_icon">group.png</property>
   <property name="allow_discussion">False</property>
 
   <!-- Hierarchy control -->
@@ -42,7 +42,7 @@
   <alias from="(Default)" to="(dynamic view)"/>
   <alias from="edit" to="@@edit"/>
   <alias from="sharing" to="@@sharing"/>
-  <alias from="view" to="@@santa-view"/>
+  <alias from="view" to="@@view"/>
 
   <action title="View" action_id="view" category="object" condition_expr=""
       url_expr="string:${folder_url}/" visible="True">

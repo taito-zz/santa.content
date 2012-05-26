@@ -20,6 +20,4 @@
     title="santa.content"
     />
 
-  <include package=".browser" />
-
 </configure>
