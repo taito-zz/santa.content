@@ -6,6 +6,7 @@ from santa.content.config import COUNTRIES
 from zope.schema import Choice
 from zope.schema import List
 from zope.schema import TextLine
+from zope.schema import URI
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
@@ -54,6 +55,12 @@ class IPartner(form.Schema):
         description=_(u"Input e-mail line by line putting representative e-mail on the top."),
         value_type=TextLine(),
         required=True,
+    )
+
+    link = URI(
+        title=_(u'Link'),
+        description=_(u'Link to the organization.'),
+        required=False,
     )
 
     year = Choice(

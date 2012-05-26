@@ -16,6 +16,7 @@
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
+      <element value="Document"/>
       <element value="Image"/>
   </property>
 
@@ -41,7 +42,7 @@
   <alias from="(Default)" to="(dynamic view)"/>
   <alias from="edit" to="@@edit"/>
   <alias from="sharing" to="@@sharing"/>
-  <alias from="view" to="@@view"/>
+  <alias from="view" to="@@santa-view"/>
 
   <action title="View" action_id="view" category="object" condition_expr=""
       url_expr="string:${folder_url}/" visible="True">
