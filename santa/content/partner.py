@@ -1,6 +1,6 @@
 from datetime import datetime
 from plone.directives import form
-from plone.namedfile.field import NamedImage
+from plone.namedfile.field import NamedBlobImage
 from santa.content import _
 from santa.content.config import COUNTRIES
 from zope.schema import Choice
@@ -9,6 +9,7 @@ from zope.schema import TextLine
 from zope.schema import URI
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
+from plone.namedfile.interfaces import IImageScaleTraversable
 
 
 countries = SimpleVocabulary(
@@ -24,10 +25,10 @@ current_year = datetime.now().year
 years = range(current_year, 1999, -1)
 
 
-class IPartner(form.Schema):
+class IPartner(form.Schema, IImageScaleTraversable):
     """Generic container content type for versatile content."""
 
-    image = NamedImage(
+    image = NamedBlobImage(
         title=_(u'Logo'),
         description=_(u'Upload your organization logo.'),
         required=False,
@@ -36,6 +37,11 @@ class IPartner(form.Schema):
     address = TextLine(
         title=_(u'Street Address'),
         required=True,
+    )
+
+    city = TextLine(
+        title=_(u'City'),
+        required=False,
     )
 
     post_code = TextLine(

@@ -29,6 +29,7 @@ setup(
         'hexagonit.testing',
         'plone.app.dexterity',
         'plone.app.referenceablebehavior',
+        'plone.namedfile [blobs]',
         'setuptools',
         'zope.i18nmessageid',
     ],
