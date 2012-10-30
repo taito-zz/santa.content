@@ -7,18 +7,15 @@ setup(
     version='0.1',
     description="",
     long_description=open("README.rst").read(),
-    # Get more strings from
-    # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
-        "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
-    ],
+        "Programming Language :: Python :: 2.7"],
     keywords='',
     author='ABITA',
     author_email='taito.horiuchi@abita.fi',
-    url='',
+    url='http://santa.abita.fi/',
     license='Non-free',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['santa'],
@@ -31,12 +28,10 @@ setup(
         'plone.app.referenceablebehavior',
         'plone.namedfile [blobs]',
         'setuptools',
-        'zope.i18nmessageid',
-    ],
+        'zope.i18nmessageid'],
     entry_points="""
     # -*- Entry points: -*-
 
     [z3c.autoinclude.plugin]
     target = plone
-    """,
-)
+    """)
