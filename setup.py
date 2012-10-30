@@ -5,7 +5,7 @@ from setuptools import setup
 setup(
     name='santa.content',
     version='0.1',
-    description="",
+    description="Content types for Santa site.",
     long_description=open("README.rst").read(),
     classifiers=[
         "Framework :: Plone",
